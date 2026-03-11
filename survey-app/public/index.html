@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Transport, Food Delivery and Juice Survey</title>
+<title>Transport, Food Delivery & Fresh Juice Survey</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>Transport, Food Delivery, and Fresh Juice Survey</h1>
+<p class="subtitle">Help us understand mobility, food delivery, and healthy beverage preferences.</p>
 
 <form id="surveyForm">
 
+<!-- SECTION 1 -->
+
+<div class="section">
 <h2>Section 1: Basic Information</h2>
 
 <label>Age Group</label>
 <select name="age">
 <option>Under 18</option>
-<option>18-24</option>
-<option>25-34</option>
-<option>35-44</option>
-<option>45-54</option>
-<option>55-64</option>
+<option>18 – 24</option>
+<option>25 – 34</option>
+<option>35 – 44</option>
+<option>45 – 54</option>
+<option>55 – 64</option>
 <option>65+</option>
 </select>
 
@@ -33,7 +39,7 @@
 <option>Other</option>
 </select>
 
-<label>How often do you travel?</label>
+<label>How often do you travel within your city/town?</label>
 <select name="travelFrequency">
 <option>Daily</option>
 <option>Several times a week</option>
@@ -41,26 +47,33 @@
 <option>Rarely</option>
 </select>
 
-<h2>Section 2: Transportation</h2>
+</div>
 
-<label>Transport Method</label>
-<select name="transport">
-<option>Walking</option>
-<option>Bicycle</option>
-<option>Public transport</option>
-<option>Car</option>
-<option>Taxi</option>
-<option>E-scooter</option>
-<option>Other</option>
-</select>
+<!-- SECTION 2 -->
 
-<label>Used shared e-scooter?</label>
+<div class="section">
+
+<h2>Section 2: Transportation & E-Scooter Rental</h2>
+
+<label>Which transport method do you usually use?</label>
+
+<div class="radio-group">
+<label><input type="radio" name="transport" value="Walking"> Walking</label>
+<label><input type="radio" name="transport" value="Bicycle"> Bicycle</label>
+<label><input type="radio" name="transport" value="Public transport"> Public transport</label>
+<label><input type="radio" name="transport" value="Car"> Car</label>
+<label><input type="radio" name="transport" value="Taxi"> Taxi/Rideshare</label>
+<label><input type="radio" name="transport" value="E-scooter"> E-scooter</label>
+<label><input type="radio" name="transport" value="Other"> Other</label>
+</div>
+
+<label>Have you ever used a shared e-scooter service?</label>
 <select name="escooterUsed">
 <option>Yes</option>
 <option>No</option>
 </select>
 
-<label>E-scooter interest</label>
+<label>If available near you, would you rent an e-scooter?</label>
 <select name="escooterInterest">
 <option>Definitely yes</option>
 <option>Probably yes</option>
@@ -69,9 +82,49 @@
 <option>Definitely not</option>
 </select>
 
-<h2>Section 3: Food Delivery</h2>
+<label>Main reason to rent an e-scooter</label>
+<select name="escooterReason">
+<option>Convenience</option>
+<option>Saving time</option>
+<option>Fun</option>
+<option>Environmentally friendly</option>
+<option>Avoid traffic</option>
+<option>Other</option>
+</select>
+
+<label>How much would you pay per ride?</label>
+<select name="escooterPrice">
+<option>€0.50 – €1</option>
+<option>€1 – €2</option>
+<option>€2 – €3</option>
+<option>€3 – €5</option>
+<option>More than €5</option>
+</select>
+
+<label>Concerns about e-scooters</label>
+
+<div class="checkbox-group">
+
+<label><input type="checkbox" name="escooterConcerns" value="Safety"> Safety</label>
+<label><input type="checkbox" name="escooterConcerns" value="Cost"> Cost</label>
+<label><input type="checkbox" name="escooterConcerns" value="Availability"> Availability</label>
+<label><input type="checkbox" name="escooterConcerns" value="Parking"> Parking issues</label>
+<label><input type="checkbox" name="escooterConcerns" value="Weather"> Weather</label>
+<label><input type="checkbox" name="escooterConcerns" value="No concerns"> No concerns</label>
+<label><input type="checkbox" name="escooterConcerns" value="Other"> Other</label>
+
+</div>
+
+</div>
+
+<!-- SECTION 3 -->
+
+<div class="section">
+
+<h2>Section 3: Online Food Ordering</h2>
 
 <label>Do you order food online?</label>
+
 <select name="foodOrder">
 <option>Frequently</option>
 <option>Sometimes</option>
@@ -79,28 +132,61 @@
 <option>Never</option>
 </select>
 
-<label>Preferred platform</label>
-<select name="platform">
-<option>Uber Eats</option>
-<option>Lieferando</option>
-<option>Wolt</option>
-<option>Restaurant delivery</option>
+<label>Platforms you use</label>
+
+<div class="checkbox-group">
+
+<label><input type="checkbox" name="platforms" value="Uber Eats"> Uber Eats</label>
+<label><input type="checkbox" name="platforms" value="Lieferando"> Lieferando</label>
+<label><input type="checkbox" name="platforms" value="Wolt"> Wolt</label>
+<label><input type="checkbox" name="platforms" value="Restaurant delivery"> Restaurant delivery</label>
+<label><input type="checkbox" name="platforms" value="Other"> Other</label>
+<label><input type="checkbox" name="platforms" value="None"> I do not order online</label>
+
+</div>
+
+<label>Food type ordered online</label>
+
+<select name="foodType">
+<option>Fast food</option>
+<option>Restaurant meals</option>
+<option>Healthy food</option>
+<option>Snacks</option>
+<option>Drinks</option>
 <option>Other</option>
 </select>
 
-<label>Delivery fee willing to pay</label>
+<label>Maximum delivery fee</label>
+
 <select name="deliveryFee">
-<option>€0–€1</option>
-<option>€1–€2</option>
-<option>€2–€3</option>
-<option>€3–€4</option>
-<option>€4–€5</option>
-<option>>€5</option>
+<option>€0 – €1</option>
+<option>€1 – €2</option>
+<option>€2 – €3</option>
+<option>€3 – €4</option>
+<option>€4 – €5</option>
+<option>More than €5</option>
 </select>
 
-<h2>Section 4: Fresh Juice</h2>
+<label>Most important factor</label>
 
-<label>How often drink fresh juice?</label>
+<select name="foodPriority">
+<option>Price</option>
+<option>Delivery time</option>
+<option>Food quality</option>
+<option>Healthy options</option>
+<option>Discounts</option>
+</select>
+
+</div>
+
+<!-- SECTION 4 -->
+
+<div class="section">
+
+<h2>Section 4: Fresh Juice Awareness</h2>
+
+<label>How often do you drink fresh juice?</label>
+
 <select name="juiceFrequency">
 <option>Daily</option>
 <option>Several times a week</option>
@@ -109,50 +195,93 @@
 <option>Rarely</option>
 </select>
 
-<label>Preferred juice</label>
+<label>Where do you buy juice?</label>
+
+<select name="juicePlace">
+<option>Supermarkets</option>
+<option>Juice bars</option>
+<option>Cafés</option>
+<option>Home</option>
+<option>I rarely drink juice</option>
+</select>
+
+<label>Prefer cold-pressed juice?</label>
+
+<select name="coldPressed">
+<option>Yes</option>
+<option>No</option>
+<option>Maybe</option>
+</select>
+
+<label>Preferred juice type</label>
+
 <select name="juiceType">
 <option>Orange</option>
 <option>Apple</option>
 <option>Mixed fruit</option>
-<option>Vegetable</option>
+<option>Vegetable juice</option>
 <option>Smoothies</option>
 <option>Other</option>
 </select>
 
 <label>Price willing to pay</label>
+
 <select name="juicePrice">
-<option>€1–€2</option>
-<option>€2–€3</option>
-<option>€3–€4</option>
-<option>€4–€5</option>
-<option>>€5</option>
+<option>€1 – €2</option>
+<option>€2 – €3</option>
+<option>€3 – €4</option>
+<option>€4 – €5</option>
+<option>More than €5</option>
 </select>
 
-<h2>Section 5: Interest</h2>
+<label>Factors influencing purchase</label>
 
-<label>Interested services</label>
+<div class="checkbox-group">
 
-<br>
-<input type="checkbox" name="services" value="Juice stands"> Juice stands
-<br>
-<input type="checkbox" name="services" value="Juice delivery"> Juice delivery
-<br>
-<input type="checkbox" name="services" value="Subscription"> Subscription
-<br>
-<input type="checkbox" name="services" value="Healthy drinks near universities"> Healthy drinks near universities
+<label><input type="checkbox" name="juiceFactors" value="Taste"> Taste</label>
+<label><input type="checkbox" name="juiceFactors" value="Health"> Health benefits</label>
+<label><input type="checkbox" name="juiceFactors" value="Fresh"> Fresh ingredients</label>
+<label><input type="checkbox" name="juiceFactors" value="Price"> Price</label>
+<label><input type="checkbox" name="juiceFactors" value="Convenience"> Convenience</label>
 
-<br><br>
+</div>
+
+</div>
+
+<!-- SECTION 5 -->
+
+<div class="section">
+
+<h2>Section 5: Interest in New Services</h2>
+
+<div class="checkbox-group">
+
+<label><input type="checkbox" name="services" value="Juice stands"> Fresh juice stands</label>
+<label><input type="checkbox" name="services" value="Juice delivery"> Juice delivery</label>
+<label><input type="checkbox" name="services" value="Subscription"> Juice subscription</label>
+<label><input type="checkbox" name="services" value="Healthy drinks near universities"> Healthy drinks near universities</label>
+
+</div>
+
+<label>Would you like more healthy beverage options?</label>
+
+<select name="healthyOptions">
+<option>Yes</option>
+<option>No</option>
+<option>Not sure</option>
+</select>
 
 <label>Suggestions</label>
 
-<br>
 <textarea name="feedback" rows="4"></textarea>
 
-<br><br>
+</div>
 
-<button type="submit">Submit Survey</button>
+<button type="submit" class="submit-btn">Submit Survey</button>
 
 </form>
+
+</div>
 
 <script src="survey.js"></script>
 

@@ -4,34 +4,49 @@ e.preventDefault();
 
 const formData = new FormData(this);
 
-let services = [];
-
-document.querySelectorAll("input[name='services']:checked")
-.forEach(el => services.push(el.value));
+function getCheckboxValues(name){
+return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(el=>el.value);
+}
 
 const data = {
-  age: formData.get("age"),
-  occupation: formData.get("occupation"),
-  travelFrequency: formData.get("travelFrequency"),
-  transport: formData.get("transport"),
-  escooterUsed: formData.get("escooterUsed"),
-  escooterInterest: formData.get("escooterInterest"),
-  foodOrder: formData.get("foodOrder"),
-  platform: formData.get("platform"),
-  deliveryFee: formData.get("deliveryFee"),
-  juiceFrequency: formData.get("juiceFrequency"),
-  juiceType: formData.get("juiceType"),
-  juicePrice: formData.get("juicePrice"),
-  services: services,
-  feedback: formData.get("feedback")
+
+age:formData.get("age"),
+occupation:formData.get("occupation"),
+travelFrequency:formData.get("travelFrequency"),
+
+transport:formData.get("transport"),
+escooterUsed:formData.get("escooterUsed"),
+escooterInterest:formData.get("escooterInterest"),
+escooterReason:formData.get("escooterReason"),
+escooterPrice:formData.get("escooterPrice"),
+escooterConcerns:getCheckboxValues("escooterConcerns"),
+
+foodOrder:formData.get("foodOrder"),
+platforms:getCheckboxValues("platforms"),
+foodType:formData.get("foodType"),
+deliveryFee:formData.get("deliveryFee"),
+foodPriority:formData.get("foodPriority"),
+
+juiceFrequency:formData.get("juiceFrequency"),
+juicePlace:formData.get("juicePlace"),
+coldPressed:formData.get("coldPressed"),
+juiceType:formData.get("juiceType"),
+juicePrice:formData.get("juicePrice"),
+juiceFactors:getCheckboxValues("juiceFactors"),
+
+services:getCheckboxValues("services"),
+healthyOptions:formData.get("healthyOptions"),
+
+feedback:formData.get("feedback")
+
 };
 
 await fetch("/api/response",{
 method:"POST",
-headers:{ "Content-Type":"application/json" },
+headers:{"Content-Type":"application/json"},
 body:JSON.stringify(data)
 });
 
-alert("Survey submitted. Thank you!");
+alert("Thank you! Your response has been recorded.");
 
 });
