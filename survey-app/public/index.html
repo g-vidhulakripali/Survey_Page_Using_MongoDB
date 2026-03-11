@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transport, Food Delivery and Juice Survey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Transport, Food Delivery, and Fresh Juice Survey</h1>
+
+<form id="surveyForm">
+
+<h2>Section 1: Basic Information</h2>
+
+<label>Age Group</label>
+<select name="age">
+<option>Under 18</option>
+<option>18-24</option>
+<option>25-34</option>
+<option>35-44</option>
+<option>45-54</option>
+<option>55-64</option>
+<option>65+</option>
+</select>
+
+<label>Occupation</label>
+<select name="occupation">
+<option>Student</option>
+<option>Working Professional</option>
+<option>Self-employed</option>
+<option>Retired</option>
+<option>Other</option>
+</select>
+
+<label>How often do you travel?</label>
+<select name="travelFrequency">
+<option>Daily</option>
+<option>Several times a week</option>
+<option>Occasionally</option>
+<option>Rarely</option>
+</select>
+
+<h2>Section 2: Transportation</h2>
+
+<label>Transport Method</label>
+<select name="transport">
+<option>Walking</option>
+<option>Bicycle</option>
+<option>Public transport</option>
+<option>Car</option>
+<option>Taxi</option>
+<option>E-scooter</option>
+<option>Other</option>
+</select>
+
+<label>Used shared e-scooter?</label>
+<select name="escooterUsed">
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<label>E-scooter interest</label>
+<select name="escooterInterest">
+<option>Definitely yes</option>
+<option>Probably yes</option>
+<option>Not sure</option>
+<option>Probably not</option>
+<option>Definitely not</option>
+</select>
+
+<h2>Section 3: Food Delivery</h2>
+
+<label>Do you order food online?</label>
+<select name="foodOrder">
+<option>Frequently</option>
+<option>Sometimes</option>
+<option>Rarely</option>
+<option>Never</option>
+</select>
+
+<label>Preferred platform</label>
+<select name="platform">
+<option>Uber Eats</option>
+<option>Lieferando</option>
+<option>Wolt</option>
+<option>Restaurant delivery</option>
+<option>Other</option>
+</select>
+
+<label>Delivery fee willing to pay</label>
+<select name="deliveryFee">
+<option>€0–€1</option>
+<option>€1–€2</option>
+<option>€2–€3</option>
+<option>€3–€4</option>
+<option>€4–€5</option>
+<option>>€5</option>
+</select>
+
+<h2>Section 4: Fresh Juice</h2>
+
+<label>How often drink fresh juice?</label>
+<select name="juiceFrequency">
+<option>Daily</option>
+<option>Several times a week</option>
+<option>Once a week</option>
+<option>Occasionally</option>
+<option>Rarely</option>
+</select>
+
+<label>Preferred juice</label>
+<select name="juiceType">
+<option>Orange</option>
+<option>Apple</option>
+<option>Mixed fruit</option>
+<option>Vegetable</option>
+<option>Smoothies</option>
+<option>Other</option>
+</select>
+
+<label>Price willing to pay</label>
+<select name="juicePrice">
+<option>€1–€2</option>
+<option>€2–€3</option>
+<option>€3–€4</option>
+<option>€4–€5</option>
+<option>>€5</option>
+</select>
+
+<h2>Section 5: Interest</h2>
+
+<label>Interested services</label>
+
+<br>
+<input type="checkbox" name="services" value="Juice stands"> Juice stands
+<br>
+<input type="checkbox" name="services" value="Juice delivery"> Juice delivery
+<br>
+<input type="checkbox" name="services" value="Subscription"> Subscription
+<br>
+<input type="checkbox" name="services" value="Healthy drinks near universities"> Healthy drinks near universities
+
+<br><br>
+
+<label>Suggestions</label>
+
+<br>
+<textarea name="feedback" rows="4"></textarea>
+
+<br><br>
+
+<button type="submit">Submit Survey</button>
+
+</form>
+
+<script src="survey.js"></script>
+
+</body>
+</html>
